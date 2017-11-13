@@ -1,0 +1,89 @@
+html {
+	min-height: 100%;
+	width: 100%;
+	font-family: 'Merriweather', serif;
+	text-align: center;
+ 	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+ 	color: #212121;
+}
+
+.text-greetings {
+	font-size: 75px;
+	letter-spacing: 3px;
+	margin-bottom: 0px;
+}
+
+.text-greetings-secondary {
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.text-field {
+	margin-top: 5px;
+	font-weight: bolder;
+}
+
+.text-time {
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 65px;
+	letter-spacing: -10px;
+	margin-top: -15px;
+}
+
+.text-word {
+	font-size: 30px;
+	margin-bottom: -5px;
+}
+
+.input-quantity {
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid #777777;
+	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 20px;
+}
+
+.input-typing {
+	padding: 20px;
+	width: 92%;
+	font-size: 35px;
+	border-radius: 10px;
+	border: none;
+	margin-top: 25px;
+}
+
+.margin-top-36 {
+	margin-top: 36px !important;
+}
+
+.margin-top-72 {
+	margin-top: 72px !important;
+}
+
+.flex-box {
+	width: 100%;
+	display: flex;
+}
+
+.container {
+	margin: 0 auto;
+	width: 800px;
+}
+
+.width-33 {
+	width: 33%;
+}
+
+.box-info {
+	height: 100px;
+	padding: 15px;
+	margin: 10px;
+	background-color: white;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+.align-left {
+	text-align: left;
+}

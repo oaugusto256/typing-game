@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing game - How fast can you type?</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/typing-game.js"></script>
+</head>
+<body>
+	<div>
+		<h1 class="text-greetings">Typing game_</h1>
+		<h3 class="text-greetings-secondary">How fast do you think you can type?</h3>
+	</div>
+
+	<div class="container margin-top-36">
+		<div class="flex-box center">
+			<div class="width-33 box-info">
+				<p class="text-field">Choose the words language: </p>
+				<div class="align-left">
+					<input type="radio" name="language" value="en"> English<br>
+  					<input type="radio" name="language" value="pt-br"> Portuguese<br>
+				</div>
+			</div>
+			<div class="width-33 box-info">
+				<p class="text-field">Choose the amount of words: </p>
+				<input class="input-quantity" type="number" name="quantity" min="10" max="50" value="15">
+			</div>
+			<div class="width-33 box-info">
+				<p class="text-field">Time passed: </p>
+				<div class="text-time">
+					00:00
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container margin-top-36">
+		<p class="text-word">House</p>
+	</div>
+
+	<div class="container">
+		<input class="input-typing" type="" name="" placeholder="Click 'Enter' to start the challenge...">
+	</div>
+	<!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-101846080-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
