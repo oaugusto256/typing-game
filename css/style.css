@@ -1,10 +1,16 @@
 html {
+	font-family: 'Merriweather', serif;
+	color: #353535;
 	min-height: 100%;
 	width: 100%;
-	font-family: 'Merriweather', serif;
 	text-align: center;
  	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
- 	color: #212121;
+
+}
+
+#underscore {
+	-webkit-animation-duration: 1.2s; /* Safari 4.0 - 8.0 */
+	animation-duration: 1.2s;
 }
 
 .text-greetings {
@@ -32,16 +38,16 @@ html {
 
 .text-word {
 	font-size: 30px;
-	margin-bottom: -5px;
+	margin-bottom: 0px;s
 }
 
 .input-quantity {
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 20px;
 	padding: 10px;
 	border-radius: 5px;
 	border: 2px solid #777777;
 	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-	font-family: 'Share Tech Mono', monospace;
-	font-size: 20px;
 }
 
 .input-typing {
@@ -51,6 +57,20 @@ html {
 	border-radius: 10px;
 	border: none;
 	margin-top: 25px;
+}
+
+.input-typing:focus {
+	border-radius: 10px;
+}
+
+.box-info {
+	height: 100px;
+	padding: 15px;
+	margin: 10px;
+	background-color: #595959;
+	color: #e5e5e5;
+	border-radius: 10px;
+	font-size: 15px;
 }
 
 .margin-top-36 {
@@ -75,14 +95,6 @@ html {
 	width: 33%;
 }
 
-.box-info {
-	height: 100px;
-	padding: 15px;
-	margin: 10px;
-	background-color: white;
-	border-radius: 10px;
-	font-size: 15px;
-}
 
 .align-left {
 	text-align: left;
