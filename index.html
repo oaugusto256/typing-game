@@ -26,7 +26,7 @@
 
 	<div class="margin-top-12">
 		<button class="button button-start" onclick="startGame()">Start</button>
-		<button class="button button-stop">Stop</button>
+		<button class="button button-stop" onclick="stopTime()" >Stop</button>
 	</div>
 		
 	<div class="container margin-top-24">
@@ -43,9 +43,9 @@
 				<input class="input-quantity" type="number" name="quantity" min="10" max="50" value="15">
 			</div>
 			<div class="width-33 box-info">
-				<p class="text-field">Time passed: </p>
+				<p class="text-field">Timer: </p>
 				<div class="text-time">
-					<p id="time"><span id="min">00</span>:<span id="seg">00</span></p>
+					<span id="min">00</span>:<span id="seg">00</span>
 				</div>
 			</div>
 		</div>
