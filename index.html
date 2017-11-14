@@ -21,10 +21,15 @@
 	</div>
 
 	<div class="container">
-		<input id="input-typing" class="input-typing" type="input" name="input-typing" placeholder="Click 'Enter' to start the challenge..." autofocus>
+		<input id="input-typing" class="input-typing" type="input" name="input-typing" placeholder="Click 'Start' to challenge yourself..." autofocus>
 	</div>
 
-	<div class="container margin-top-36">
+	<div class="margin-top-12">
+		<button class="button button-start" onclick="startGame()">Start</button>
+		<button class="button button-stop">Stop</button>
+	</div>
+		
+	<div class="container margin-top-24">
 		<div class="flex-box center">
 			<div class="width-33 box-info">
 				<p class="text-field">Choose the words language: </p>
@@ -40,7 +45,7 @@
 			<div class="width-33 box-info">
 				<p class="text-field">Time passed: </p>
 				<div class="text-time">
-					00:00
+					<p id="time"><span id="min">00</span>:<span id="seg">00</span></p>
 				</div>
 			</div>
 		</div>

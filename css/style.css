@@ -13,6 +13,10 @@ html {
 	animation-duration: 1.2s;
 }
 
+#time {
+	margin: 0 auto;
+}
+
 .text-greetings {
 	font-size: 75px;
 	letter-spacing: 3px;
@@ -57,24 +61,49 @@ html {
 	border-radius: 10px;
 	border: none;
 	margin-top: 25px;
+	background-color: #f7f7f7;
 }
 
 .input-typing:focus {
 	border-radius: 10px;
 }
 
+.button {
+	color: #f7f7f7;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+	border-radius: 10px;
+	border: none;
+	padding: 10px;
+	width: 115px;
+	font-size: 25px;
+	margin-top: 20px;
+}
+
+.button-start {
+	background-color: #076b00;
+}
+
+.button-stop {
+	background-color: #c6001a;
+}
+
 .box-info {
 	height: 100px;
 	padding: 15px;
 	margin: 10px;
-	background-color: #595959;
+	background-color: #353535;
 	color: #e5e5e5;
 	border-radius: 10px;
 	font-size: 15px;
 }
 
-.margin-top-36 {
-	margin-top: 36px !important;
+.margin-top-12 {
+	margin-top: 12px !important;
+}
+
+.margin-top-24 {
+	margin-top: 24px !important;
 }
 
 .margin-top-72 {

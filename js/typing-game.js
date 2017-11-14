@@ -4,22 +4,23 @@ var ptbr_words = ["uma","habilidade","capaz","sobre","acima","aceitar","acordo",
 var typingWord;
 var actualWord;
 var correctWords = 0;
+var gameStarted = false;
 
 $(document).ready(function(){
-	changeWord();
-
 	$('#input-typing').bind('input', function(){ 
-		typingWord = $('#input-typing').val();
+		if(gameStarted){
+			typingWord = $('#input-typing').val();
 
-		console.log('Até o momento a palavra está: ', checkWord());
+			console.log('Até o momento a palavra está: ', checkWord());
 
-		if(lastCheck()) {
-			correctWords += 1;
-			changeWord();
-		} 
+			if(lastCheck()) {
+				correctWords += 1;
+				cleanInput();
+				changeWord();
+			}
+		}
 	});
 });
-
 
 function changeWord() {
 	var length_ptbr = ptbr_words.length;
@@ -43,4 +44,49 @@ function lastCheck() {
 		return true;
 	else
 		return false;
+}
+
+function cleanInput() {
+	$('#input-typing').val('');
+}
+
+function startGame() {
+	sessionValue = $('#time')[0].innerText;
+
+	$('#min').text(sessionValue);
+    $('#seg').text('00');
+    
+    var min = parseInt(sessionValue);
+    var seg = parseInt();
+
+    startSession(min*60);
+
+	startSession();
+	gameStarted = true;
+	actualWord = '';
+	$("#input-typing").focus();
+	cleanInput();
+	changeWord();
+}
+
+var timer;
+
+function startSession(duration) {
+  
+    var time = duration, minutes, seconds; 
+    timer = setInterval(function () {
+        if (--time < 0) {
+          time = duration;
+        }
+        
+        minutes = parseInt(time / 60, 10)
+        seconds = parseInt(time % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        $('#min').text(minutes);
+        $('#seg').text(seconds);
+      
+    }, 1000);  
 }
