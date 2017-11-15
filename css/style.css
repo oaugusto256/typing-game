@@ -18,7 +18,7 @@ footer {
 	left: 85%;
 	top: 2.5%;
 	width: 200px;
-	height: 100px;
+	height: 130px;
 	border: 3px solid #353535;
 	border-radius: 10px;
 
@@ -40,6 +40,11 @@ footer {
 	display: none;
 }
 
+.star {
+	font-size: 17.5px;
+	color: #f4df42;
+}
+
 .text-greetings {
 	font-size: 75px;
 	letter-spacing: 3px;
@@ -54,6 +59,14 @@ footer {
 .text-field {
 	margin-top: 5px;
 	font-weight: bolder;
+}
+
+.text-star {
+	font-size: 13.5px;
+}
+
+.text-creator{
+	font-size: 15px;
 }
 
 .text-field-result {
