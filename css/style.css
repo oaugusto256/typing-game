@@ -5,16 +5,39 @@ html {
 	width: 100%;
 	text-align: center;
  	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+}
 
+footer {
+	margin-top: 20px;
+	font-weight: bolder;
+}
+
+#social-media-box {
+	font-weight: bolder;
+	position: absolute;
+	left: 85%;
+	top: 2.5%;
+	width: 200px;
+	height: 100px;
+	border: 3px solid #353535;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
 
 #underscore {
-	-webkit-animation-duration: 1.2s; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 1.2s;
 	animation-duration: 1.2s;
 }
 
 #time {
 	margin: 0 auto;
+}
+
+#box-result {
+	display: none;
 }
 
 .text-greetings {
@@ -33,6 +56,28 @@ html {
 	font-weight: bolder;
 }
 
+.text-field-result {
+	margin-top: 5px;
+	font-size: 25px;
+	font-weight: bolder;
+	color: #353535;
+	width: 100%;
+}
+
+.text-field-result-secondary {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 15px;
+	font-weight: bolder;
+	color: #353535;
+}
+
+.list-words {
+	text-align: left;
+	color: #353535;
+	font-weight: bolder;
+}
+
 .text-time {
 	font-family: 'Share Tech Mono', monospace;
 	font-size: 65px;
@@ -42,7 +87,14 @@ html {
 
 .text-word {
 	font-size: 35px;
-	margin-bottom: 0px;s
+	margin-bottom: 0px;
+}
+
+.input-quantity:hover {
+	transition: all 0.5s ease;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
 
 .input-quantity {
@@ -62,6 +114,10 @@ html {
 	border: none;
 	margin-top: 25px;
 	background-color: #f7f7f7;
+
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .input-typing:focus {
@@ -73,7 +129,6 @@ html {
 	margin-left: 7.5px;
 	margin-right: 7.5px;
 	border-radius: 10px;
-	border: none;
 	padding: 10px;
 	width: 115px;
 	font-size: 25px;
@@ -81,11 +136,65 @@ html {
 }
 
 .button-start {
+	border: 2px solid #076b00;
 	background-color: #076b00;
+}
+
+.button-start:hover {
+	color: #076b00;
+	background-color: transparent;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	transition: all 0.5s ease;
 }
 
 .button-stop {
 	background-color: #c6001a;
+	border: 2px solid #c6001a;
+}
+
+.button-stop:hover { 
+	color: #c6001a;
+	background-color: transparent;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	transition: all 0.5s ease;
+}
+
+.button-share {
+	background-color: #4367B2;
+	border: 2px solid #4367B2;
+	width: 150px;
+	font-size: 15px;
+}
+
+.button-share:hover {
+	color: #4367B2;
+	background-color: transparent;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	transition: all 0.5s ease;
+}
+
+.button-close {
+	background-color: transparent;
+	border: 2px solid #c6001a;
+	border-radius: 30px;
+	height: 35px;
+	width: 35px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #c6001a;
+}
+
+.button-close:hover {
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	transition: all 0.5s ease;
 }
 
 .box-info {
@@ -96,6 +205,49 @@ html {
 	color: #e5e5e5;
 	border-radius: 10px;
 	font-size: 15px;
+}
+
+.box-result {
+	height: 300px;
+	padding: 15px;
+	margin: 10px;
+	background-color: #f7f7f7;
+	color: #e5e5e5;
+	border-radius: 10px;
+	font-size: 15px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.box-result-time {
+	color: #c6001a;
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 60px;
+	letter-spacing: -10px;
+	margin-top: -15px;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 150px;
+	height: 60px;
+	background-color: transparent;
+
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(198,0,26,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(198,0,26,1);
+	box-shadow: 0px 0px 10px 0px rgba(198,0,26,1);
+}
+
+.social-icon {
+	color: #353535;
+	font-size: 27px;
+	margin-right: 2.5px;
+	margin-left: 2.5px;
+}
+
+.social-icon:hover {
+	color: #515151;
 }
 
 .margin-top-12 {
@@ -111,7 +263,6 @@ html {
 }
 
 .flex-box {
-	width: 100%;
 	display: flex;
 }
 
@@ -124,6 +275,13 @@ html {
 	width: 33%;
 }
 
+.width-67 {
+	width: 67%;
+}
+
+.width-100 {
+	width: 100%;
+}
 
 .align-left {
 	text-align: left;

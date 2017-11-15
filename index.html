@@ -5,19 +5,68 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="icons/css/font-awesome.min.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/typing-game.js"></script>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<h1 class="text-greetings">Typing game<span id="underscore" class="animated infinite fadeIn">_</span></h1>	
 
 	<div class="container">
-		<h3 class="text-greetings-secondary">How fast you can type?</h3>
+		<h3 class="text-greetings-secondary">How fast can you type?</h3>
 		<p class="text-word">...</p>
+	</div>
+
+	<div id="box-result" class="container margin-top-24">
+		<div class="center box-result">
+			<div class="flex-box">
+				<p class="text-field-result">Congratulations! You have finished the challenge. </p>
+				<button class="button-close" onclick="closeResult()">X</button>
+			</div>
+				
+			<div class="flex-box">
+				<div class="width-67">
+					<p class="text-field-result-secondary">These are the words that you have typed: </p>
+					<div class="flex-box">
+						<ol id="list-1" class="list-words">	
+						</ol>
+						<ol id="list-2" class="list-words" start="11">
+						</ol>
+						<ol id="list-3" class="list-words" start="21">
+						</ol>
+						<ol id="list-4" class="list-words" start="31">
+						</ol>
+						<ol id="list-5" class="list-words" start="41">
+						</ol>
+					</div>
+				</div>
+					
+				<div class="width-33">
+					<p id="words-time" class="text-field-result-secondary"></p>
+					<div class="box-result-time">
+						<span class="min-result">00</span>:<span class="seg-result">00</span>
+					</div>
+					<div class="fb-share-button margin-top-24" data-href="http://oaugusto.com/typing-game" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Foaugusto.com%2Ftyping-game&amp;src=sdkpreparse">Compartilhar</a></div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="container">
@@ -26,15 +75,15 @@
 
 	<div class="margin-top-12">
 		<button class="button button-start" onclick="startGame()">Start</button>
-		<button class="button button-stop" onclick="stopTime()" >Stop</button>
+		<button class="button button-stop" onclick="stopGame()" >Stop</button>
 	</div>
-		
+	
 	<div class="container margin-top-24">
 		<div class="flex-box center">
 			<div class="width-33 box-info">
 				<p class="text-field">Choose the words language: </p>
-				<div class="align-left">
-					<input type="radio" name="language" value="en"> English<br>
+				<div id="languages-form" class="align-left">
+					<input type="radio" name="language" value="en" checked> English<br>
   					<input type="radio" name="language" value="pt-br"> Brazilian Portuguese<br>
 				</div>
 			</div>
@@ -45,11 +94,27 @@
 			<div class="width-33 box-info">
 				<p class="text-field">Timer: </p>
 				<div class="text-time">
-					<span id="min">00</span>:<span id="seg">00</span>
+					<span class="min">00</span>:<span class="seg">00</span>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="social-media-box">
+		<p>Creator's Social medias</p>
+		<a class="social-icon" href="https://github.com/tavioalves" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="social-icon" href="https://codepen.io/tavioalves/"  target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+        <a class="social-icon" href="https://www.linkedin.com/in/otavio-augusto-alves-silva-9b332ab2" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a class="social-icon" href="https://www.freecodecamp.com/tavioalves" target="_blank"><i class="icon-freecodecamp"></i></a>
+        <a class="social-icon" href="https://www.facebook.com/oaugustosilva" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="social-icon" href="https://www.instagram.com/tavioaugusto/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	</div>
+	<!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Otavio Augusto <script>document.write(new Date().getFullYear())</script> © All Rights Reserved.</p>
+        </div>
+    </footer>
 	<!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
