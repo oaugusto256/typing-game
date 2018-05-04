@@ -8,7 +8,7 @@ Web app to measure how fast can you type. Showing an average of your typing skil
 
 ## Installation
 
-Clone the repository and see the solved problems with any text editor.
+Clone the repository and move to the project folder.
 
 ## Using
 
